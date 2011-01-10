@@ -78,7 +78,7 @@ int main(int argc, const char * const argv[])
     char * name = NULL;
 
     if (argc != ARGV_NUM_ARGS) {
-        fprintf(stderr, "Invalid usage. Usage: %s RELPATH", argv[0]);
+        fprintf(stderr, "Invalid usage. Usage: %s RELPATH\n", argv[0]);
         return ERR_SYSTEM_ERROR;
     }
 
