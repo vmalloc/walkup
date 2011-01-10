@@ -1,0 +1,1 @@
+Program('walkup', ['walkup.c'], CFLAGS=['-Wall', '-Werror', '-O3'])
