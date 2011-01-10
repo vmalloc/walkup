@@ -37,13 +37,13 @@ static int _find_path(const char * path, const char * end, char ** name)
     struct stat needle;
     int retval;
 
-    if (0 > stat(end, &end_stat)) {
+    if (0 != stat(end, &end_stat)) {
         perror("Cannot stat root");
         return ERR_SYSTEM_ERROR;
     }
     
     do {    
-        if (0 > stat(path, &needle)) {
+        if (0 != stat(path, &needle)) {
             if (errno != ENOENT) {
                 perror("Cannot stat");
                 return ERR_SYSTEM_ERROR;
