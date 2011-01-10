@@ -41,10 +41,8 @@ static int _find_path(const char * path, const char * end, char ** name)
         perror("Cannot stat root");
         return ERR_SYSTEM_ERROR;
     }
-
     
-    do {
-    
+    do {    
         if (0 > stat(path, &needle)) {
             if (errno != ENOENT) {
                 perror("Cannot stat");
@@ -73,7 +71,6 @@ static int _find_path(const char * path, const char * end, char ** name)
 
     return ERR_NOT_FOUND;
 }
-
     
 int main(int argc, const char * const argv[])
 {
